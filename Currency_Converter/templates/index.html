@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Currency Converter</title>
+
+    <link rel="stylesheet" 
+    href="{{ url_for('static', filename='style.css') }}">
+    
+    <link rel="icon" type="image/png"
+      href="{{ url_for('static', filename='currency_converter_favicon.png') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Currency Converter</h1>
+
+        <p>Convert currencies using live exchange rates</p>
+
+        <div class="converter">
+
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" placeholder="Enter amount">
+
+            <label for="from_currency">From</label>
+            <select id="from_currency">
+                <option value="USD">USD - US Dollar</option>
+                <option value="INR">INR - Indian Rupee</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="GBP">GBP - British Pound</option>
+                <option value="JPY">JPY - Japanese Yen</option>
+                <option value="AUD">AUD - Australian Dollar</option>
+                <option value="CAD">CAD - Canadian Dollar</option>
+                <option value="CHF">CHF - Swiss Franc</option>
+                <option value="CNY">CNY - Chinese Yuan</option>
+            </select>
+
+            <label for="to_currency">To</label>
+            <select id="to_currency">
+                <option value="INR">INR - Indian Rupee</option>
+                <option value="USD">USD - US Dollar</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="GBP">GBP - British Pound</option>
+                <option value="JPY">JPY - Japanese Yen</option>
+                <option value="AUD">AUD - Australian Dollar</option>
+                <option value="CAD">CAD - Canadian Dollar</option>
+                <option value="CHF">CHF - Swiss Franc</option>
+                <option value="CNY">CNY - Chinese Yuan</option>
+            </select>
+
+            <button id="convertBtn">Convert</button>
+
+            <div id="result">
+                Result will appear here
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
